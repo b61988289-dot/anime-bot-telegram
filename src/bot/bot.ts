@@ -1,6 +1,6 @@
 import TelegramBot from "node-telegram-bot-api";
 import { logger } from "../lib/logger.js";
-import { generateDIDVideo, generateAnimatedAvatar, type VideoQuality } from "./did.js";
+import { generateDIDVideo, generateAnimatedAvatar, generateTTSAudio, getTTSLang, type VideoQuality } from "./did.js";
 import {
   DRAMAS,
   VOZES,
@@ -87,9 +87,43 @@ export function startBot() {
       );
       return true;
     }
+
+    // ─── Fallback: Send image + TTS audio narration separately ───
+    logger.info("D-ID failed, using TTS audio fallback");
+
+    // Send the image first
     try {
-      await bot.sendPhoto(chatId, imageUrl, { caption: caption + "\n\n_🖼️ Imagem gerada por IA_", parse_mode: "Markdown" });
-    } catch {}
+      await bot.sendPhoto(chatId, imageUrl, {
+        caption: caption + "\n\n_🖼️ Imagem gerada por IA_",
+        parse_mode: "Markdown",
+      });
+    } catch (err) {
+      logger.error({ err }, "Failed to send fallback image");
+    }
+
+    // Generate and send TTS audio narration
+    const ttsLang = getTTSLang(voiceId);
+    const audioBuffer = await generateTTSAudio(text, ttsLang);
+    if (audioBuffer) {
+      try {
+        await bot.sendAudio(
+          chatId,
+          audioBuffer,
+          {
+            caption: `🗣️ *Narração por IA — Yuna*\n_${text.slice(0, 80)}..._`,
+            parse_mode: "Markdown",
+            title: "Narração DoramaAI",
+            performer: "Yuna IA",
+          },
+          { filename: "narracao.mp3", contentType: "audio/mpeg" },
+        );
+        logger.info("TTS audio fallback sent successfully");
+        return true;
+      } catch (err) {
+        logger.error({ err }, "Failed to send TTS audio");
+      }
+    }
+
     return false;
   }
 
