@@ -1,17 +1,27 @@
 services:
   - type: worker
-    name: anime-bot-telegram
-    runtime: python
+    name: dorama-ai-bot
+    env: node
     region: oregon
     plan: free
-    buildCommand: pip install -r bot/requirements.txt
-    startCommand: cd bot && python anime_bot.py
+    buildCommand: npm install && npm run build
+    startCommand: node dist/index.mjs
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
-      - key: ADMIN_IDS
+      - key: TELEGRAM_ADMIN_ID
         sync: false
-      - key: TON_WALLET_ADDRESS
-        value: UQDn8qu6wduopti68NN9aFjJ0ORN8diPtuUMuR8_7tQG7lai
-      - key: PYTHON_VERSION
-        value: 3.11.9
+      - key: DID_API_KEY
+        sync: false
+      - key: PIX_KEY
+        sync: false
+      - key: TONCOIN_ADDRESS
+        sync: false
+      - key: VIP_PRICE_BRL
+        value: "29.90"
+      - key: VIP_PRICE_TON
+        value: "2.5"
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3000"
