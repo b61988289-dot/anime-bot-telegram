@@ -102,22 +102,23 @@ export function startBot() {
   }
 
   function mainKeyboard(vip: boolean) {
-    return {
-      inline_keyboard: [
-        [
-          { text: "⭐ Destaques", callback_data: "destaque" },
-          { text: "📊 Stats", callback_data: "stats" },
-        ],
-        [{ text: "🎭 Gerar Personagem IA", callback_data: "gerar_personagem" }],
-        [{ text: "🗣️ Mudar Idioma", callback_data: "idioma_menu" }],
-        vip
-          ? [{ text: "👑 Minha Área VIP", callback_data: "area_vip" }]
-          : [
-              { text: "👑 Ser VIP — HD sem propagandas", callback_data: "assinar_vip" },
-            ],
-        [{ text: "❓ Ajuda", callback_data: "ajuda" }],
+    const rows: { text: string; callback_data: string }[][] = [
+      [{ text: "🎭 Gerar Personagem IA", callback_data: "gerar_personagem" }],
+      [
+        { text: "⭐ Destaques", callback_data: "destaque" },
+        { text: "🗣️ Idioma", callback_data: "idioma_menu" },
       ],
-    };
+    ];
+    if (vip) {
+      rows.push([{ text: "👑 Minha Área VIP", callback_data: "area_vip" }]);
+    } else {
+      rows.push([{ text: "👑 Ser VIP — HD sem propagandas", callback_data: "assinar_vip" }]);
+    }
+    rows.push([
+      { text: "📊 Stats", callback_data: "stats" },
+      { text: "❓ Ajuda", callback_data: "ajuda" },
+    ]);
+    return { inline_keyboard: rows };
   }
 
   function backMenu() {
@@ -443,7 +444,30 @@ export function startBot() {
         parse_mode: "Markdown",
         reply_markup: {
           inline_keyboard: [
-            [{ text: "🎭 Gerar Outro Personagem", callback_data: "gerar_personagem" }],
+            [{ text: "🎭 Gerar Outro", callback_data: "gerar_personagem" }],
+            [
+              { text: "📋 Galeria", callback_data: "galeria" },
+              { text: "🏠 Menu", callback_data: "menu" },
+            ],
+          ],
+        },
+      });
+      return;
+    }
+
+    // galeria via callback
+    if (data === "galeria") {
+      const characters = getAllCharacters();
+      let text = "🎭 *Galeria de Personagens*\n\n";
+      for (const char of characters) {
+        text += `✦ *${char.name}*\n_${char.description}_\n\n`;
+      }
+      text += "Use o botão abaixo para gerar um com video D-ID!";
+      await bot.sendMessage(chatId, text, {
+        parse_mode: "Markdown",
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "🎭 Gerar Personagem", callback_data: "gerar_personagem" }],
             [{ text: "🏠 Menu", callback_data: "menu" }],
           ],
         },
@@ -455,14 +479,15 @@ export function startBot() {
     if (data === "ajuda") {
       await bot.editMessageText(
         `❓ *Ajuda DoramaAI*\n\n` +
-        `🎬 *Como assistir:*\n` +
-        `1. Clique em "Ver Doramas"\n` +
+        `🎭 *Personagem IA:*\n` +
+        `Clique em "Gerar Personagem IA" para criar um personagem com video D-ID\n\n` +
+        `🎬 *Como assistir doramas:*\n` +
+        `1. Clique em "Destaques"\n` +
         `2. Escolha um dorama\n` +
         `3. Clique no Ep 1 (grátis!)\n` +
         `4. Yuna gera o vídeo e narra para você\n\n` +
-        `🗣️ *Idiomas:* "Mudar Idioma" para 14 opções\n\n` +
-        `👑 *VIP:* 50 eps em HD · sem propaganda\n` +
-        `📊 *Qualidade:* Grátis = padrão · VIP = HD\n\n` +
+        `🗣️ *Idiomas:* 14 opções de narração\n` +
+        `👑 *VIP:* 50 eps em HD · sem propaganda\n\n` +
         `📩 *Suporte:* Envie mensagem de texto aqui`,
         {
           chat_id: chatId,
