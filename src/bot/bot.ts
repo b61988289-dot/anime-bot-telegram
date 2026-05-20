@@ -104,7 +104,6 @@ export function startBot() {
   function mainKeyboard(vip: boolean) {
     return {
       inline_keyboard: [
-        [{ text: "🎬 Ver Doramas", callback_data: "catalogo" }],
         [
           { text: "⭐ Destaques", callback_data: "destaque" },
           { text: "📊 Stats", callback_data: "stats" },
@@ -114,7 +113,6 @@ export function startBot() {
         vip
           ? [{ text: "👑 Minha Área VIP", callback_data: "area_vip" }]
           : [
-              { text: "▶️ Assistir Grátis", callback_data: "catalogo" },
               { text: "👑 Ser VIP — HD sem propagandas", callback_data: "assinar_vip" },
             ],
         [{ text: "❓ Ajuda", callback_data: "ajuda" }],
