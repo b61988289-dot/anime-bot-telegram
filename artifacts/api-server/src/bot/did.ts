@@ -37,14 +37,26 @@ function buildAuthKey(): string {
   const key = DID_API_KEY.trim();
   if (!key) return "";
 
+  // Case 1: entire key is already base64(email:password)
   try {
     const decoded = Buffer.from(key, "base64").toString("utf8");
     if (decoded.includes(":") && decoded.includes("@")) {
-      return key; // Ja e base64 valido de email:password
+      return key;
     }
   } catch {}
 
+  // Case 2: key is in format base64(email):password — decode email first
   if (key.includes(":")) {
+    const colonIdx = key.indexOf(":");
+    const emailPart = key.slice(0, colonIdx);
+    const passwordPart = key.slice(colonIdx + 1);
+    try {
+      const decodedEmail = Buffer.from(emailPart, "base64").toString("utf8");
+      if (decodedEmail.includes("@")) {
+        return Buffer.from(`${decodedEmail}:${passwordPart}`).toString("base64");
+      }
+    } catch {}
+    // Plain email:password
     return Buffer.from(key).toString("base64");
   }
 
