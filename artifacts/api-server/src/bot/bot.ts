@@ -1261,6 +1261,7 @@ function _startBotInternal() {
         `🎭 *${historia.personagem.nome}* — _${historia.genero}_\n\n` +
         `👗 ${historia.personagem.roupa}\n` +
         `🎀 ${historia.personagem.acessorioPrazer}\n` +
+        `🔞 ${historia.personagem.brinquedoAdulto}\n` +
         `💄 ${historia.personagem.maquiagem.split(",")[0]}\n` +
         `🌹 ${historia.personagem.perfume.split(" com")[0]}\n` +
         `🗣️ Voz ${historia.personagem.voz}\n` +
@@ -1480,6 +1481,7 @@ function _startBotInternal() {
       `👗 *Roupa:* ${personagem.roupa}\n` +
       `💎 *Acessório:* ${personagem.acessorio}\n` +
       `🎀 *Acessório de Prazer:* ${personagem.acessorioPrazer}\n` +
+      `🔞 *Brinquedo Adulto:* ${personagem.brinquedoAdulto}\n` +
       `💄 *Maquiagem:* ${personagem.maquiagem}\n` +
       `🌹 *Perfume:* ${personagem.perfume}\n` +
       `🔥 *Tatuagem:* ${personagem.tatuagem}\n` +

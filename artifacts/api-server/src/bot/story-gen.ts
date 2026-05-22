@@ -9,6 +9,7 @@ export interface Personagem {
   roupa: string;
   acessorio: string;
   acessorioPrazer: string;
+  brinquedoAdulto: string;
   personalidade: string;
   voz: string;
   tomVoz: string;
@@ -253,6 +254,55 @@ const TONS_VOZ = [
   "aguda e excitada, difícil de conter",
   "calma e controlada com explosões de intensidade",
   "grave e aveludada, como chocolate derretido no ouvido",
+];
+
+const BRINQUEDOS_ADULTOS = [
+  "vibrador bullet rosa discreto e potente com 10 velocidades",
+  "dildo de silicone realístico com ventosa e veias marcadas",
+  "plug anal de cristal transparente com base de joia rosa",
+  "vibrador rabbit duplo que estimula clítoris e ponto G simultâneo",
+  "bolas tailandesas de silicone para prazer progressivo",
+  "cinta peniana strap-on preta com arnês regulável",
+  "vibrador wand massageador potente corpo inteiro",
+  "anel peniano vibratório com estimulador de clítoris",
+  "plug anal inflável de silicone médico com bomba",
+  "vibrador sugador de clítoris com ondas de pressão",
+  "dildo de vidro curvado para ponto G com texturas em espiral",
+  "kit BDSM completo: mordaça, algemas, chicote, venda e pinças",
+  "vibrador calcinha controle remoto para usar em público",
+  "masturbador masculino texturizado com sucção automática",
+  "plugs anais em kit de 3 tamanhos crescentes em silicone",
+  "vibrador dupla penetração simultânea vaginal e anal",
+  "bomba de sucção para mamilos com vibração",
+  "dildo ejaculador realístico com reservatório de líquido",
+  "vibrador ponto G curvado com função de vai-e-vem automático",
+  "estimulador prostático com controle por app bluetooth",
+  "pênis capa extensora com texturas e vibração na ponta",
+  "roda de wartenberg de aço para sensações intensas na pele",
+  "máquina de sexo compacta com velocidade regulável e ventosa",
+  "vibrador língua giratória para sexo oral simulado",
+  "conjunto de velas BDSM de baixa temperatura para cera quente",
+];
+
+const BRINQUEDOS_ADULTOS_MASC = [
+  "masturbador automático com sucção e aquecimento interno",
+  "anel peniano de silicone com vibração para duo",
+  "plug anal prostático curvado vibratório com controle remoto",
+  "bomba peniana de vácuo com manômetro de pressão",
+  "cinta com dildo acoplado para dupla penetração",
+  "masturbador boca realística com língua vibratória",
+  "cockring de metal pesado com trava de segurança",
+  "estimulador perineal vibratório discreto e potente",
+  "sleeve texturizado extensora com nervuras internas",
+  "plug anal rabo de raposa pelúcia para roleplay animal",
+  "máquina de ordenha automática com velocidade variável",
+  "kit sounding uretral em aço cirúrgico graduado",
+  "cinta de castidade masculina com chave e cadeado",
+  "massageador prostático pulsante com app bluetooth",
+  "stroker transparente texturizado para exibicionismo",
+  "eletroestimulador TENS erótico com eletrodos",
+  "dildo anal inflável com vibração e controle sem fio",
+  "anel duplo para pênis e testículos com vibração",
 ];
 
 const FETICHES = [
@@ -703,6 +753,7 @@ export function gerarPersonagem(): Personagem {
     roupa: pick(ROUPAS),
     acessorio: pick(ACESSORIOS),
     acessorioPrazer: pick(ACESSORIOS_PRAZER),
+    brinquedoAdulto: pick(BRINQUEDOS_ADULTOS),
     personalidade: pick(PERSONALIDADES),
     voz: pick(VOZES),
     tomVoz: pick(TONS_VOZ),
@@ -724,6 +775,7 @@ export function gerarPersonagemMasculino(): Personagem {
     roupa: pick(ROUPAS_MASC),
     acessorio: pick(ACESSORIOS_MASC),
     acessorioPrazer: pick(ACESSORIOS_PRAZER), // reuse unisex
+    brinquedoAdulto: pick(BRINQUEDOS_ADULTOS_MASC),
     personalidade: pick(PERSONALIDADES_MASC),
     voz: pick(VOZES_MASC),
     tomVoz: pick(TONS_VOZ), // reuse
@@ -753,6 +805,7 @@ export function gerarHistoria(generoId: string, personagem?: Personagem, customT
     `Corpo ${p.corporal}. ` +
     `Vestia ${p.roupa}, usando ${p.acessorio}. ` +
     `Trazia consigo ${p.acessorioPrazer}. ` +
+    `Escondido entre seus pertences, ${p.brinquedoAdulto}. ` +
     `${p.personalidade.charAt(0).toUpperCase() + p.personalidade.slice(1)}, ` +
     `sua voz ${p.voz}, tom ${p.tomVoz}, ecoava pelo ambiente. ` +
     `Maquiagem: ${p.maquiagem}. Perfume de ${p.perfume} deixava rastro. ` +
@@ -840,7 +893,8 @@ export function gerarEpisodio(historia: Historia, episodioNum: number): Episodio
     `Corpo ${p.corporal}, maquiagem ${p.maquiagem.split(",")[0]}. ` +
     `O perfume de ${p.perfume.split(" com")[0]} preenchia o ambiente. ` +
     `Sua voz ${p.voz}, tom ${p.tomVoz}, carregava promessas que ninguém ousaria recusar. ` +
-    `${p.acessorioPrazer.charAt(0).toUpperCase() + p.acessorioPrazer.slice(1)} esperava pelo momento certo.`;
+    `${p.acessorioPrazer.charAt(0).toUpperCase() + p.acessorioPrazer.slice(1)} esperava pelo momento certo. ` +
+    `Discretamente guardado, ${p.brinquedoAdulto} prometia elevar a intensidade da noite.`;
 
   const imgPrompt =
     `cinematic anime style, ${p.genero === "masculino" ? "handsome man" : "beautiful woman"} ${p.nome}, ` +
@@ -902,6 +956,7 @@ export const ATTR_OPTIONS = {
     roupas: ROUPAS,
     acessorios: ACESSORIOS,
     acessoriosPrazer: ACESSORIOS_PRAZER,
+    brinquedosAdultos: BRINQUEDOS_ADULTOS,
     personalidades: PERSONALIDADES,
     vozes: VOZES,
     tonsVoz: TONS_VOZ,
@@ -919,6 +974,7 @@ export const ATTR_OPTIONS = {
     roupas: ROUPAS_MASC,
     acessorios: ACESSORIOS_MASC,
     acessoriosPrazer: ACESSORIOS_PRAZER,
+    brinquedosAdultos: BRINQUEDOS_ADULTOS_MASC,
     personalidades: PERSONALIDADES_MASC,
     vozes: VOZES_MASC,
     tonsVoz: TONS_VOZ,
@@ -936,5 +992,6 @@ export const CUSTOM_STEPS = [
   { key: "corPele", label: "🎨 Pele", attr: "corPele" },
   { key: "corporal", label: "🏋️ Corpo", attr: "corporais" },
   { key: "roupa", label: "👗 Roupa", attr: "roupas" },
+  { key: "brinquedoAdulto", label: "🔞 Brinquedo Adulto", attr: "brinquedosAdultos" },
   { key: "personalidade", label: "💜 Personalidade", attr: "personalidades" },
 ] as const;
