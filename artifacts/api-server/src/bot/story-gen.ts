@@ -919,14 +919,16 @@ export function gerarHistoria(generoId: string, personagem?: Personagem, customT
 
   const isExplicitGenre = ["romance", "fantasia", "historico", "yuri"].includes(genero.id);
   const femHentai =
-    "hentai anime style, nsfw, ecchi, nude, exposed breasts, touching herself, hand between legs, " +
-    "touching pussy, masturbating, spread legs, wet skin, blushing, ahegao expression, erotic pose, explicit, ";
+    "ultra detailed hentai anime illustration, nsfw, ecchi, nude female, exposed breasts, touching herself, hand between legs, " +
+    "touching pussy, masturbating, spread legs, wet skin, blushing, ahegao expression, erotic pose, explicit, " +
+    "perfect anatomy, perfect hands, perfect fingers, detailed face, beautiful eyes, ";
   const mascHentai =
-    "hentai anime style, nsfw, nude, muscular, touching himself, hand on cock, stroking, masturbating, " +
-    "hard erection, wet skin, blushing, pleasure face, erotic pose, explicit, ";
+    "ultra detailed hentai anime illustration, nsfw, nude male, muscular, touching himself, hand on cock, stroking, masturbating, " +
+    "hard erection, wet skin, blushing, pleasure face, erotic pose, explicit, " +
+    "perfect anatomy, perfect hands, detailed face, ";
   const hentaiStyle = isExplicitGenre
     ? (p.genero === "masculino" ? mascHentai : femHentai)
-    : "sensual ecchi anime style, suggestive pose, cleavage, ";
+    : "ultra detailed sensual ecchi anime illustration, suggestive pose, cleavage, perfect anatomy, perfect hands, ";
   const nakedDesc = isExplicitGenre
     ? (p.genero === "masculino"
       ? "naked muscular body, abs visible, stroking himself, pleasure expression, "
@@ -941,7 +943,7 @@ export function gerarHistoria(generoId: string, personagem?: Personagem, customT
     `${p.acessorio.replace(/[^\w\s]/g, "")}, ` +
     `BACKGROUND SCENERY: ${cenario.replace(/[^\w\s]/g, "")}, detailed landscape behind character, ` +
     `${genero.label.replace(/[^\w\s]/g, "")} mood, ` +
-    `cinematic lighting, detailed background environment, 8k, masterpiece`;
+    `cinematic lighting, volumetric lighting, detailed background environment, sharp focus, 8k uhd, masterpiece quality, best quality`;
 
   const s = randSeed();
 
@@ -1030,14 +1032,16 @@ export function gerarEpisodio(historia: Historia, episodioNum: number): Episodio
 
   const isExplicit = ["Romance Ardente", "Fantasia Erótica", "Histórico Proibido", "Yuri Proibido"].includes(historia.genero);
   const epFemHentai =
-    "hentai anime style, nsfw, ecchi, nude, exposed breasts, touching pussy, masturbating, hand on vagina, " +
-    "legs spread, wet body, blushing hard, moaning, orgasm, erotic scene, explicit, ";
+    "ultra detailed hentai anime illustration, nsfw, ecchi, nude female, exposed breasts, touching pussy, masturbating, hand on vagina, " +
+    "legs spread, wet body, blushing hard, moaning, orgasm, erotic scene, explicit, " +
+    "perfect anatomy, perfect hands, perfect fingers, detailed face, beautiful eyes, ";
   const epMascHentai =
-    "hentai anime style, nsfw, nude, muscular, jerking off, hand on cock, masturbating, stroking hard cock, " +
-    "wet body, blushing, orgasm face, pleasure, erotic scene, explicit, ";
+    "ultra detailed hentai anime illustration, nsfw, nude male, muscular, jerking off, hand on cock, masturbating, stroking hard cock, " +
+    "wet body, blushing, orgasm face, pleasure, erotic scene, explicit, " +
+    "perfect anatomy, perfect hands, detailed face, ";
   const epHentaiStyle = isExplicit
     ? (p.genero === "masculino" ? epMascHentai : epFemHentai)
-    : "sensual ecchi anime style, suggestive, ";
+    : "ultra detailed sensual ecchi anime illustration, suggestive, perfect anatomy, perfect hands, ";
   const epNakedDesc = isExplicit
     ? (p.genero === "masculino"
       ? "naked sweating muscular body, stroking himself, orgasm face, "
@@ -1049,7 +1053,7 @@ export function gerarEpisodio(historia: Historia, episodioNum: number): Episodio
     `${epNakedDesc}` +
     `intense scene episode ${episodioNum}, ` +
     `BACKGROUND SCENERY: ${historia.cenario.replace(/[^\w\s]/g, "")}, detailed landscape environment behind character, ` +
-    `dramatic lighting, cinematic composition with scenic background, 8k`;
+    `cinematic lighting, volumetric lighting, dramatic composition with scenic background, sharp focus, 8k uhd, masterpiece quality, best quality`;
 
   return {
     numero: episodioNum,

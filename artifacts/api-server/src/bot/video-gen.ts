@@ -56,7 +56,7 @@ export async function generateEpisodeVideo(
     // Phase 1: Run image animation + TTS in parallel (voz sexy, fina, suave)
     const [animatedVideoBuffer, ttsBuffer] = await Promise.all([
       animateImageWithReplicate(imageUrl),
-      generateTTSAudio(text, voiceId, "-18%", "+6%"),
+      generateTTSAudio(text, voiceId, "-25%", "+8%"),
     ]);
 
     if (!ttsBuffer || ttsBuffer.length === 0) {
@@ -223,7 +223,7 @@ async function animateImageWithReplicate(
         body: JSON.stringify({
           input: {
             prompt:
-              "gentle subtle movement, breathing, hair flowing in wind, cinematic",
+              "sensual anime character moving body, breathing heavily, chest rising, hips swaying, hair blowing, eyes blinking, lips parting, cinematic dramatic lighting, smooth fluid motion, romantic atmosphere",
             image: imageUrl,
           },
         }),
@@ -500,8 +500,8 @@ async function composeWithKenBurns(
       // Filters
       "-filter_complex",
       [
-        // Ken Burns: slow zoom from 1.0x to 1.08x, scale to 720px wide
-        `[0:v]scale=800:-2,zoompan=z='min(zoom+0.0003\\,1.08)':d=1:x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':s=720x720:fps=24[vid]`,
+        // Ken Burns: more dynamic zoom + pan for visible movement
+        `[0:v]scale=1200:-2,zoompan=z='if(eq(on\,1)\,1\,min(zoom+0.001\,1.3))':d=1:x='iw/2-(iw/zoom/2)+sin(on*0.02)*20':y='ih/2-(ih/zoom/2)+cos(on*0.015)*15':s=720x720:fps=24[vid]`,
         // Mix narration (full) + ambient (15%)
         `[1:a][2:a]amix=inputs=2:duration=first:weights=1 0.15[audio]`,
       ].join(";"),
