@@ -934,6 +934,21 @@ export function gerarHistoria(generoId: string, personagem?: Personagem, customT
   const tema = customTheme ? ` sobre ${customTheme}` : "";
   const titulo = gerarTitulo(p, genero);
 
+  const GEMIDOS = [
+    "Ahhh... ahhh... mmm...",
+    "Ohhh... sim... mais...",
+    "Mmmmm... ahhh... não para...",
+    "Ahhh... ohhh... isso...",
+    "Mmm... ahhh... assim...",
+    "Ohhh... meu Deus... ahhh...",
+    "Ahhh... mais forte... mmm...",
+    "Sim... sim... ahhh... ohhh...",
+  ];
+  const isEroticGenre = ["romance", "fantasia", "historico", "yaoi", "yuri"].includes(genero.id);
+  const gemido1 = isEroticGenre ? ` ${pick(GEMIDOS)} ` : " ";
+  const gemido2 = isEroticGenre ? ` ${pick(GEMIDOS)} ` : " ";
+  const gemidoFinal = isEroticGenre ? ` ${pick(GEMIDOS)} Ahhh!` : "";
+
   const sinopse =
     `${p.nome} — cabelos ${p.cabelo}, olhos ${p.corOlhos}, pele ${p.corPele}. ` +
     `Corpo ${p.corporal}. ` +
@@ -944,11 +959,11 @@ export function gerarHistoria(generoId: string, personagem?: Personagem, customT
     `sua voz ${p.voz}, tom ${p.tomVoz}, ecoava pelo ambiente. ` +
     `Maquiagem: ${p.maquiagem}. Perfume de ${p.perfume} deixava rastro. ` +
     `${p.tatuagem !== "nenhuma tatuagem — pele imaculada e perfeita" ? `Tatuagem: ${p.tatuagem}. ` : ""}` +
-    `Em um(a) ${cenario}${tema}, ${conflito}. ` +
-    `Quando tudo parecia definido, ${reviravolta}. ` +
+    `Em um(a) ${cenario}${tema}, ${conflito}.${gemido1}` +
+    `Quando tudo parecia definido, ${reviravolta}.${gemido2}` +
     `No clímax da história, ${final_}. ` +
     `${p.fetiche.charAt(0).toUpperCase() + p.fetiche.slice(1)}... ` +
-    `Cada toque, cada olhar, cada suspiro... nada seria como antes.`;
+    `Cada toque, cada olhar, cada suspiro... nada seria como antes.${gemidoFinal}`;
 
   const isExplicitGenre = ["romance", "fantasia", "historico", "yaoi", "yuri"].includes(genero.id);
   const femHentai =
@@ -1039,14 +1054,28 @@ export function gerarEpisodio(historia: Historia, episodioNum: number): Episodio
     "Ponto de Ruptura","O Clímax",
   ];
 
+  const EP_GEMIDOS = [
+    "Ahhh... ahhh... mmm...",
+    "Ohhh... sim... mais...",
+    "Mmmmm... ahhh... não para...",
+    "Ahhh... ohhh... isso...",
+    "Mmm... ahhh... assim... mais forte...",
+    "Ohhh... meu Deus... ahhh... sim...",
+    "Ahhh... mais... mais fundo... mmm...",
+    "Sim... sim... ahhh... ohhh... não para...",
+  ];
+  const isEroticEp = ["Romance Ardente", "Fantasia Erótica", "Histórico Proibido", "Yaoi Ardente", "Yuri Proibido"].includes(historia.genero);
+  const epGemido = isEroticEp ? ` ${pick(EP_GEMIDOS)} ` : " ";
+  const epGemidoFinal = isEroticEp ? ` ${pick(EP_GEMIDOS)} Ahhh!` : "";
+
   const s = randSeed();
   const sinopse = pick(continuacoes) +
-    ` Com seus cabelos ${p.cabelo} e ${p.acessorio}, ela era uma visão impossível de ignorar. ` +
+    ` Com seus cabelos ${p.cabelo} e ${p.acessorio}, ${p.genero === "masculino" ? "ele era" : "ela era"} uma visão impossível de ignorar. ` +
     `Corpo ${p.corporal}, maquiagem ${p.maquiagem.split(",")[0]}. ` +
-    `O perfume de ${p.perfume.split(" com")[0]} preenchia o ambiente. ` +
+    `O perfume de ${p.perfume.split(" com")[0]} preenchia o ambiente.${epGemido}` +
     `Sua voz ${p.voz}, tom ${p.tomVoz}, carregava promessas que ninguém ousaria recusar. ` +
     `${p.acessorioPrazer.charAt(0).toUpperCase() + p.acessorioPrazer.slice(1)} esperava pelo momento certo. ` +
-    `Discretamente guardado, ${p.brinquedoAdulto} prometia elevar a intensidade da noite.`;
+    `Discretamente guardado, ${p.brinquedoAdulto} prometia elevar a intensidade da noite.${epGemidoFinal}`;
 
   const isExplicit = ["Romance Ardente", "Fantasia Erótica", "Histórico Proibido", "Yaoi Ardente", "Yuri Proibido"].includes(historia.genero);
   const epFemHentai =
