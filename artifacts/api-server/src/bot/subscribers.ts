@@ -15,6 +15,7 @@ export interface Subscriber {
   ratings: Record<string, number>;
   joinedAt: string;
   ageVerified: boolean;
+  blockedMinor?: boolean;
 }
 
 type DB = Record<string, Subscriber>;
@@ -150,4 +151,16 @@ export function setAgeVerified(telegramId: string): void {
     DB[telegramId]!.ageVerified = true;
     save(DB);
   }
+}
+
+export function setBlockedMinor(telegramId: string): void {
+  if (DB[telegramId]) {
+    DB[telegramId]!.blockedMinor = true;
+    DB[telegramId]!.ageVerified = false;
+    save(DB);
+  }
+}
+
+export function isBlockedMinor(telegramId: string): boolean {
+  return DB[telegramId]?.blockedMinor === true;
 }

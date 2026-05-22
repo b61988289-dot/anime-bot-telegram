@@ -12,7 +12,7 @@ import {
   register, isVip, setVip, setLanguage, getLanguage,
   allSubscribers, stats, toggleFavorite, getFavorites,
   addToHistory, getWatchHistory, rateEpisode, getRating,
-  isAgeVerified, setAgeVerified,
+  isAgeVerified, setAgeVerified, isBlockedMinor, setBlockedMinor,
 } from "./subscribers.js";
 import { getNextAd } from "./ads.js";
 import { createPixCharge } from "./pix.js";
@@ -343,6 +343,16 @@ function _startBotInternal() {
     register(user);
     const userId = String(user.id);
 
+    // Bloqueio permanente de menores
+    if (isBlockedMinor(userId)) {
+      await bot.sendMessage(
+        chatId,
+        `🚫 *ACESSO PERMANENTEMENTE BLOQUEADO*\n\n━━━━━━━━━━━━━━━━━━━━━\n✦ D O R A M A  A I ✦\n━━━━━━━━━━━━━━━━━━━━━\n\nVocê declarou ser menor de 18 anos.\nSeu acesso foi bloqueado permanentemente.\n\n⚠️ Este bloqueio não pode ser revertido.`,
+        { parse_mode: "Markdown" },
+      );
+      return;
+    }
+
     // Gate de verificação de idade — impede menores de acessar
     if (!isAgeVerified(userId)) {
       await bot.sendMessage(
@@ -386,7 +396,16 @@ function _startBotInternal() {
     const chatId = msg.chat.id;
     const user = msg.from!;
     register(user);
-    const vip = isVip(String(user.id));
+    const userId = String(user.id);
+    if (isBlockedMinor(userId)) {
+      await bot.sendMessage(chatId, "🚫 Acesso permanentemente bloqueado. Este bot é exclusivo para maiores de 18 anos.");
+      return;
+    }
+    if (!isAgeVerified(userId)) {
+      await bot.sendMessage(chatId, "🔞 Você precisa verificar sua idade primeiro.\nDigite /start para iniciar a verificação.");
+      return;
+    }
+    const vip = isVip(userId);
     await bot.sendMessage(
       chatId,
       `━━━━━━━━━━━━━━━━━━━━━\n✦ D O R A M A  A I ✦\n━━━━━━━━━━━━━━━━━━━━━\n\nEscolha uma opção:`,
@@ -418,14 +437,21 @@ function _startBotInternal() {
     }
 
     if (data === "age_confirm_no") {
+      setBlockedMinor(userId);
       try {
         await bot.editMessageText(
-          `🚫 *Acesso negado.*\n\nEste conteúdo é exclusivo para maiores de 18 anos.\n\nVocê foi desconectado do bot.`,
+          `🚫 *Acesso PERMANENTEMENTE bloqueado.*\n\nVocê declarou ser menor de 18 anos.\nEste bot contém conteúdo adulto e seu acesso foi bloqueado permanentemente para sua proteção.\n\n⚠️ *Menores de idade NÃO podem acessar este conteúdo.*\nEste bloqueio não pode ser revertido.`,
           { chat_id: chatId, message_id: query.message!.message_id, parse_mode: "Markdown" },
         );
       } catch {
-        await bot.sendMessage(chatId, "🚫 Acesso negado. Conteúdo para maiores de 18.");
+        await bot.sendMessage(chatId, "🚫 Acesso permanentemente bloqueado. Você declarou ser menor de 18.");
       }
+      return;
+    }
+
+    // ── bloqueio permanente de menores ──
+    if (isBlockedMinor(userId)) {
+      await bot.sendMessage(chatId, "🚫 Acesso permanentemente bloqueado. Este bot é exclusivo para maiores de 18 anos.");
       return;
     }
 
@@ -1640,6 +1666,12 @@ function _startBotInternal() {
     const userId = String(user.id);
     const chatId = msg.chat.id;
 
+    // Bloqueio permanente de menores
+    if (isBlockedMinor(userId)) {
+      await bot.sendMessage(chatId, "🚫 Acesso permanentemente bloqueado. Este bot é exclusivo para maiores de 18 anos.");
+      return;
+    }
+
     // Bloqueia se idade não verificada
     if (!isAgeVerified(userId)) {
       await bot.sendMessage(chatId,
@@ -1676,7 +1708,16 @@ function _startBotInternal() {
 
   bot.on("photo", async (msg) => {
     const user = msg.from!;
-    if (isVip(String(user.id))) {
+    const photoUserId = String(user.id);
+    if (isBlockedMinor(photoUserId)) {
+      await bot.sendMessage(msg.chat.id, "🚫 Acesso permanentemente bloqueado. Este bot é exclusivo para maiores de 18 anos.");
+      return;
+    }
+    if (!isAgeVerified(photoUserId)) {
+      await bot.sendMessage(msg.chat.id, "🔞 Você precisa verificar sua idade primeiro.\nDigite /start para iniciar a verificação.");
+      return;
+    }
+    if (isVip(photoUserId)) {
       await bot.sendMessage(msg.chat.id, "👑 Você já é VIP!");
       return;
     }
