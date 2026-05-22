@@ -776,6 +776,100 @@ const GENEROS: GeneroData[] = [
       "renunciou ao trono gritando que preferia o pau de um camponês a todo o ouro do império — e provou na frente da corte inteira",
     ],
   },
+  {
+    id: "yaoi", label: "Yaoi Ardente", emoji: "👨‍❤️‍👨",
+    cenarios: [
+      "vestiário do time de futebol após o treino, vapor do chuveiro e corpos suados",
+      "dormitório da universidade de elite, porta trancada à meia-noite",
+      "escritório do CEO no último andar, persianas fechadas após o expediente",
+      "onsen japonês privativo, dois homens sozinhos na água quente sob as estrelas",
+      "camarim do idol K-pop, depois do show, adrenalina e desejo acumulados",
+      "academia de artes marciais, tatame vazio, corpos musculosos se enfrentando",
+      "apartamento de cobertura em Tóquio, vista da cidade e lençóis de seda preta",
+      "navio militar em alto mar, cabine do capitão trancada a sete chaves",
+      "estúdio de tatuagem após o horário, a agulha e o toque da pele",
+      "bar de jazz underground, reservado escuro no fundo do salão",
+    ],
+    conflitos: [
+      "o capitão do time empurrou o novato contra o armário do vestiário, abaixou sua cueca e o chupou até ele gemer alto no chuveiro vazio",
+      "o colega de quarto acordou com tesão e encontrou o outro se masturbando — se ajoelhou e terminou o trabalho com a boca",
+      "o CEO chamou o estagiário na sala, trancou a porta e o comeu sobre a mesa de mogno enquanto ele abafava os gemidos na gravata",
+      "na água quente do onsen seus corpos se encontraram — um sentou no colo do outro e sentiu cada centímetro entrar devagar enquanto gemiam juntos",
+      "o idol beijou o membro do grupo rival no camarim e depois ficou de quatro enquanto era penetrado com força contra o espelho",
+      "a luta no tatame terminou com um por cima do outro — as calças desceram e o vencedor tomou seu prêmio ali mesmo",
+      "na cobertura ele o empurrou na cama, abriu suas pernas e o penetrou olhando nos olhos enquanto sussurrava palavras sujas",
+      "o capitão do navio convocou o tenente à cabine e ordenou que ficasse de joelhos — ele obedeceu e chupou até engolir tudo",
+      "o tatuador começou no braço e terminou entre as pernas — a agulha virou boca e as costas arquearam de prazer",
+      "no reservado escuro do bar as mãos encontraram os zíperes — se masturbaram juntos até gozar na mão um do outro",
+    ],
+    reviravoltas: [
+      "descobriram que eram rivais de empresas concorrentes mas o sexo era bom demais para parar",
+      "a câmera de segurança gravou tudo e em vez de pânico, ficaram excitados assistindo juntos e transaram de novo",
+      "o ex de um apareceu e propôs um ménage — os três acabaram nus na mesma cama explorando cada combinação",
+      "um deles revelou que era virgem por trás — o outro foi carinhoso e penetrou devagar até ele implorar por mais",
+      "descobriram que o vizinho ouvia tudo pela parede e se masturbava junto — convidaram ele para participar",
+      "o que era uma noite virou vício — não conseguiam mais ficar sem o corpo um do outro",
+      "a poção afrodisíaca que beberam no bar fez os dois ficarem duros por horas sem conseguir parar",
+      "ele descobriu que o parceiro tinha um piercing genital que multiplicava o prazer em cada estocada",
+    ],
+    finais: [
+      "gozaram juntos pela quinta vez naquela noite, corpos entrelaçados e suados, prometendo que seria para sempre",
+      "ele gozou dentro dele sussurrando 'eu te amo' pela primeira vez enquanto os dois tremiam de prazer",
+      "terminaram a noite no chuveiro — um penetrando o outro contra o azulejo enquanto a água lavava o suor",
+      "se masturbaram juntos olhando nos olhos até gozar ao mesmo tempo, sêmen misturando nos abdômens definidos",
+      "passaram o fim de semana inteiro na cama — oral, anal, brinquedos — só parando para comer e transar de novo",
+      "o orgasmo final foi tão intenso que ambos gritaram e os vizinhos aplaudiram pela parede",
+      "selaram a relação com uma noite de sexo em cada posição do Kama Sutra gay que encontraram online",
+      "adormeceram nus e abraçados depois de gozar pela última vez, sabendo que acordariam e fariam tudo de novo",
+    ],
+  },
+  {
+    id: "yuri", label: "Yuri Proibido", emoji: "👩‍❤️‍👩",
+    cenarios: [
+      "dormitório feminino do internato, cama de baixo com cortinas fechadas à meia-noite",
+      "spa luxuoso exclusivo feminino, sala de massagem privativa com óleos quentes",
+      "apartamento em Paris, varanda com vista pra Torre Eiffel, duas taças de vinho vazias",
+      "camarim da peça de teatro, figurinos pelo chão, porta trancada após a estreia",
+      "praia nudista isolada no Mediterrâneo, pôr do sol e corpos bronzeados na areia",
+      "estúdio de dança, espelhos em todas as paredes, suor e corpos flexíveis",
+      "onsen japonês feminino, vapor espesso escondendo mãos curiosas sob a água",
+      "biblioteca da universidade às 3 da manhã, entre as estantes de livros antigos",
+      "suíte de lua de mel em Santorini, banheira redonda com pétalas de rosa",
+      "ateliê de pintura, modelo nua e pintora que não resiste ao que vê",
+    ],
+    conflitos: [
+      "a colega de quarto deslizou a mão por baixo do lençol e tocou sua buceta molhada — ela gemeu baixinho e abriu mais as pernas",
+      "a massagista desceu as mãos dos ombros para os seios, depois para entre as pernas e a chupou até ela gozar na maca",
+      "o vinho acabou e os beijos começaram — uma desceu beijando pelo corpo da outra até chegar na buceta e chupar até ela tremer",
+      "no camarim tiraram os figurinos uma da outra e terminaram de tesoura no chão, bucetas se esfregando até gozarem juntas",
+      "na praia nudista uma passou óleo no corpo da outra e os dedos escorregaram para dentro — transaram na areia com as ondas nos pés",
+      "o ensaio de dança virou algo mais — uma levantou a perna da outra e a chupou de pé contra o espelho enquanto ambas assistiam",
+      "no onsen as mãos se encontraram debaixo da água — dedos dentro uma da outra, gemendo baixinho para ninguém ouvir",
+      "entre as estantes ela prensou a colega contra os livros e enfiou a mão na calcinha até ela gozar com a mão na boca",
+      "na banheira de pétalas uma sentou no rosto da outra enquanto usava um vibrador duplo que conectava as duas",
+      "a pintora largou o pincel e usou a língua como ferramenta — pintou de prazer cada centímetro do corpo da modelo",
+    ],
+    reviravoltas: [
+      "descobriram que a colega do quarto ao lado filmava tudo pelo buraco da fechadura e se masturbava assistindo",
+      "uma delas trouxe uma cinta peniana strap-on e a outra descobriu que adorava ser penetrada por uma mulher",
+      "a professora pegou as duas no ato e em vez de punir, trancou a porta e se juntou a elas",
+      "eram rivais na empresa mas o ódio virou tesão — transaram no banheiro executivo e não conseguiram mais parar",
+      "uma revelou uma coleção de brinquedos adultos — passaram a noite experimentando cada um até gozar de exaustão",
+      "o namorado de uma descobriu e em vez de raiva, pediu para assistir — elas gozaram mais forte sabendo que eram observadas",
+      "a massagem virou ritual semanal — cada vez mais ousada, cada vez mais longe dos limites",
+      "descobriram que juntas tinham orgasmos múltiplos que sozinhas nunca conseguiam",
+    ],
+    finais: [
+      "gozaram juntas de tesoura pela décima vez naquela noite, bucetas pulsando uma contra a outra, suor e gemidos",
+      "uma chupou a outra até ela gozar gritando, depois trocaram e repetiram até perder a conta dos orgasmos",
+      "usaram o vibrador duplo juntas, cada penetração sincronizada, e gozaram ao mesmo tempo tremendo e se abraçando",
+      "passaram a noite inteira explorando — dedos, língua, strap-on, brinquedos — até o amanhecer encontrá-las nuas e satisfeitas",
+      "o orgasmo final foi com as duas de tesoura sob a lua, gemendo tão alto que o eco encheu a praia deserta",
+      "selaram o amor com uma noite de prazer que nenhum homem jamais poderia dar — línguas, dedos e vibradores até desmaiar",
+      "adormeceram com as mãos ainda entre as pernas uma da outra, sonhando com a próxima vez",
+      "mudaram-se juntas e toda noite era uma nova fantasia — a coleção de brinquedos não parava de crescer",
+    ],
+  },
 ];
 
 // ── Functions ───────────────────────────────────────────────
@@ -830,7 +924,8 @@ export function gerarPersonagemMasculino(): Personagem {
 
 export function gerarHistoria(generoId: string, personagem?: Personagem, customTheme?: string): Historia {
   const genero = GENEROS.find((g) => g.id === generoId) ?? GENEROS[0]!;
-  const p = personagem ?? gerarPersonagem();
+  const p = personagem
+    ?? (generoId === "yaoi" ? gerarPersonagemMasculino() : gerarPersonagem());
   const cenario = pick(genero.cenarios);
   const conflito = pick(genero.conflitos);
   const reviravolta = pick(genero.reviravoltas);
@@ -855,15 +950,31 @@ export function gerarHistoria(generoId: string, personagem?: Personagem, customT
     `${p.fetiche.charAt(0).toUpperCase() + p.fetiche.slice(1)}... ` +
     `Cada toque, cada olhar, cada suspiro... nada seria como antes.`;
 
+  const isExplicitGenre = ["romance", "fantasia", "historico", "yaoi", "yuri"].includes(genero.id);
+  const femHentai =
+    "hentai anime style, nsfw, ecchi, nude, exposed breasts, touching herself, hand between legs, " +
+    "touching pussy, masturbating, spread legs, wet skin, blushing, ahegao expression, erotic pose, explicit, ";
+  const mascHentai =
+    "hentai anime style, nsfw, nude, muscular, touching himself, hand on cock, stroking, masturbating, " +
+    "hard erection, wet skin, blushing, pleasure face, erotic pose, explicit, ";
+  const hentaiStyle = isExplicitGenre
+    ? (p.genero === "masculino" ? mascHentai : femHentai)
+    : "sensual ecchi anime style, suggestive pose, cleavage, ";
+  const nakedDesc = isExplicitGenre
+    ? (p.genero === "masculino"
+      ? "naked muscular body, abs visible, stroking himself, pleasure expression, "
+      : "naked, nipples visible, touching vagina, sweating, moaning expression, ")
+    : `wearing ${p.roupa.replace(/[^\w\s]/g, "")}, `;
   const imgPrompt =
-    `cinematic anime style, beautiful ${p.genero === "masculino" ? "handsome man" : "woman"} named ${p.nome}, ` +
+    `${hentaiStyle}beautiful ${p.genero === "masculino" ? "handsome muscular man" : "woman"} named ${p.nome}, ` +
     `${p.cabelo.replace(/[^\w\s]/g, "")} hair, ` +
     `${p.corOlhos.replace(/[^\w\s]/g, "")} eyes, ${p.corPele.replace(/[^\w\s]/g, "")} skin, ` +
     `${p.corporal.replace(/[^\w\s]/g, "")} body, ` +
-    `wearing ${p.roupa.replace(/[^\w\s]/g, "")}, ${p.acessorio.replace(/[^\w\s]/g, "")}, ` +
+    `${nakedDesc}` +
+    `${p.acessorio.replace(/[^\w\s]/g, "")}, ` +
     `BACKGROUND SCENERY: ${cenario.replace(/[^\w\s]/g, "")}, detailed landscape behind character, ` +
     `${genero.label.replace(/[^\w\s]/g, "")} mood, ` +
-    `sensual, cinematic lighting, detailed background environment, panoramic scenery, 8k, masterpiece`;
+    `cinematic lighting, detailed background environment, 8k, masterpiece`;
 
   const s = randSeed();
 
@@ -889,6 +1000,8 @@ function gerarTitulo(p: Personagem, genero: GeneroData): string {
     terror: ["Beijo da Morte","Sombras que Desejam","Noite Carmesim","Pacto de Sangue","A Sedução Imortal","Garras do Desejo","Escuridão Ardente","Sede Eterna"],
     scifi: ["Conexão Proibida","Código do Desejo","Estrelas em Chamas","Upload do Prazer","Órbita Sensual","Pulso Quântico","Além do Infinito","Simulação Perfeita"],
     historico: ["O Segredo da Corte","Pérolas Proibidas","A Cortesã e o Rei","Seda e Espada","Noites do Império","A Concubina Rebelde","Trono de Desejo","Véu de Pecados"],
+    yaoi: ["Corpos em Chamas","Vestiário Proibido","Rendição Masculina","Desejo Entre Homens","Noite de Machos","Suor e Pecado","O Capitão e o Soldado","Pulsão Secreta"],
+    yuri: ["Pétalas Molhadas","Toque Proibido","Beijo de Seda","Segredo Entre Nós","Noite de Garotas","Espelhos do Desejo","A Pintora e a Musa","Corpos em Flor"],
   };
   const opts = titulos[genero.id] ?? titulos["romance"]!;
   return pick(opts);
@@ -935,10 +1048,26 @@ export function gerarEpisodio(historia: Historia, episodioNum: number): Episodio
     `${p.acessorioPrazer.charAt(0).toUpperCase() + p.acessorioPrazer.slice(1)} esperava pelo momento certo. ` +
     `Discretamente guardado, ${p.brinquedoAdulto} prometia elevar a intensidade da noite.`;
 
+  const isExplicit = ["Romance Ardente", "Fantasia Erótica", "Histórico Proibido", "Yaoi Ardente", "Yuri Proibido"].includes(historia.genero);
+  const epFemHentai =
+    "hentai anime style, nsfw, ecchi, nude, exposed breasts, touching pussy, masturbating, hand on vagina, " +
+    "legs spread, wet body, blushing hard, moaning, orgasm, erotic scene, explicit, ";
+  const epMascHentai =
+    "hentai anime style, nsfw, nude, muscular, jerking off, hand on cock, masturbating, stroking hard cock, " +
+    "wet body, blushing, orgasm face, pleasure, erotic scene, explicit, ";
+  const epHentaiStyle = isExplicit
+    ? (p.genero === "masculino" ? epMascHentai : epFemHentai)
+    : "sensual ecchi anime style, suggestive, ";
+  const epNakedDesc = isExplicit
+    ? (p.genero === "masculino"
+      ? "naked sweating muscular body, stroking himself, orgasm face, "
+      : "naked sweating body, touching herself, orgasm face, ")
+    : `wearing ${p.roupa.replace(/[^\w\s]/g, "")}, `;
   const imgPrompt =
-    `cinematic anime style, ${p.genero === "masculino" ? "handsome man" : "beautiful woman"} ${p.nome}, ` +
+    `${epHentaiStyle}${p.genero === "masculino" ? "handsome muscular man" : "beautiful woman"} ${p.nome}, ` +
     `${p.cabelo.replace(/[^\w\s]/g, "")} hair, ` +
-    `wearing ${p.roupa.replace(/[^\w\s]/g, "")}, sensual scene episode ${episodioNum}, ` +
+    `${epNakedDesc}` +
+    `intense scene episode ${episodioNum}, ` +
     `BACKGROUND SCENERY: ${historia.cenario.replace(/[^\w\s]/g, "")}, detailed landscape environment behind character, ` +
     `dramatic lighting, cinematic composition with scenic background, 8k`;
 
